@@ -7,7 +7,7 @@ export const VideoDescription = () => {
   return (
     <Grid container spacing={2} >
       <Grid item md={12} sx={{ "borderBottom": "1px solid #cbcbcb" }}>
-        <Typography gutterBottom variant="h4" component="div">
+        <Typography gutterBottom variant="h5" component="div">
           {description.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
