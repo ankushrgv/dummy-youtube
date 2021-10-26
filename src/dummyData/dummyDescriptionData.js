@@ -10,7 +10,6 @@ export const getDummyDescription = (videoId) => {
     let desc = { ...oddIdDescription, ...newObj }
     return desc
   }
-
 }
 
 const oddIdDescription = {

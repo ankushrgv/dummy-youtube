@@ -1,4 +1,12 @@
-export const dummyCommentData = [
+
+export const getDummyComments = (id) => {
+  if (id % 2 === 0) {
+    return evenIdCommentData
+  }
+  return oddIdCommentData
+}
+
+const oddIdCommentData = [
   {
     "id": "987",
     "userHandle": "Luke Shaw",
@@ -6,7 +14,7 @@ export const dummyCommentData = [
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 0
+    "replyCount": 10
   },
   {
     "id": "937",
@@ -80,6 +88,9 @@ export const dummyCommentData = [
     "dislikes": "185",
     "replyCount": 0
   },
+]
+
+const evenIdCommentData = [
   {
     "id": "983",
     "userHandle": "Harry Kane",
@@ -87,7 +98,7 @@ export const dummyCommentData = [
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 0
+    "replyCount": 20
   },
   {
     "id": "982",
@@ -96,7 +107,7 @@ export const dummyCommentData = [
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 0
+    "replyCount": 8
   },
   {
     "id": "981",
@@ -123,7 +134,7 @@ export const dummyCommentData = [
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 0
+    "replyCount": 2
   },
   {
     "id": "957",
@@ -132,7 +143,7 @@ export const dummyCommentData = [
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 0
+    "replyCount": 4
   },
   {
     "id": "967",

@@ -12,7 +12,7 @@ export const VideoDescription = () => {
     const dummyPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(getDummyDescription(videoId));
-      }, 3000);
+      }, 1000);
     });
 
     dummyPromise.then(value => {

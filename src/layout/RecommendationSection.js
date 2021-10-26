@@ -11,7 +11,7 @@ export const RecommendationSection = () => {
     const dummyPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(getDummyRecommendations(videoId));
-      }, 3000);
+      }, 2500);
     });
 
     dummyPromise.then(value => {
