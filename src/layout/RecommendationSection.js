@@ -8,7 +8,6 @@ export const RecommendationSection = () => {
   const { videoId } = useParams()
 
   useEffect(() => {
-    console.log(videoId)
     const dummyPromise = new Promise((resolve) => {
       setTimeout(() => {
         resolve(getDummyRecommendations(videoId));
@@ -16,7 +15,6 @@ export const RecommendationSection = () => {
     });
 
     dummyPromise.then(value => {
-      console.log(value)
       setRecommendations(value)
     })
   }, [videoId]);

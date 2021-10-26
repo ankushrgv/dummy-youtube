@@ -1,9 +1,25 @@
 
 import { Grid, Typography } from "@mui/material"
-import { dummyDescriptions } from "../../dummyData/dummyDescriptionData"
-const description = dummyDescriptions[0]
+import { useEffect, useState } from "react"
+import { useParams } from "react-router"
+import { getDummyDescription } from "../../dummyData/dummyDescriptionData"
 
 export const VideoDescription = () => {
+  const [description, setDescription] = useState({})
+  const { videoId } = useParams()
+
+  useEffect(() => {
+    const dummyPromise = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(getDummyDescription(videoId));
+      }, 3000);
+    });
+
+    dummyPromise.then(value => {
+      setDescription(value)
+    })
+  }, [videoId]);
+
   return (
     <Grid container spacing={2} >
       <Grid item md={12} sx={{ "borderBottom": "1px solid #cbcbcb" }}>
