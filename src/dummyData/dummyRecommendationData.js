@@ -1,4 +1,119 @@
-export const dummyRecommendations = [
+export const getDummyRecommendations = (id) => {
+  if (id % 2 === 0) {
+    return dummyRecommendations1
+  }
+  return dummyRecommendations2
+}
+
+const dummyRecommendations2 = [
+  {
+    "id": 123,
+    "name": "Suggestion 1",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 124,
+    "name": "Suggestion 11",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 122,
+    "name": "Suggestion 12",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 125,
+    "name": "Suggestion 13",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 126,
+    "name": "Suggestion 14",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 127,
+    "name": "Suggestion 15",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 128,
+    "name": "Suggestion 16",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 129,
+    "name": "Suggestion 17",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 121,
+    "name": "Suggestion 18",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 163,
+    "name": "Suggestion 19",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 183,
+    "name": "Suggestion 21",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 193,
+    "name": "Suggestion 31",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 133,
+    "name": "Suggestion 41",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 423,
+    "name": "Suggestion 51",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+  {
+    "id": 523,
+    "name": "Suggestion 61",
+    "channel": "Max Ritcher",
+    "views": "1.2M",
+    "thumbnail": "https://i.ytimg.com/vi/u_d23K_-v1Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMSaMUwMp28a5xnZAtzMLmzFT2UQ"
+  },
+]
+
+const dummyRecommendations1 = [
   {
     "id": 123,
     "name": "Recommendation 1",
