@@ -1,7 +1,9 @@
+import { TextField } from "@mui/material"
+
 export const AddNewComment = () => {
   return (
     <div>
-      comment input text box (fixed at top of all comments)
+      <TextField id="standard-basic" label="Standard" variant="standard" />
     </div>
   )
 }
