@@ -1,9 +1,7 @@
 import { Container, Grid } from '@mui/material';
 import './App.css';
-import { CommentSection } from './layout/CommentSection';
 import Header from './layout/Header';
-import { RecommendationSection } from './layout/RecommendationSection';
-import { VideoSection } from './layout/VideoSection';
+import { MainBody } from './layout/MainBody';
 
 function App() {
   return (
@@ -13,18 +11,8 @@ function App() {
           <Grid item md={12}>
             <Header />
           </Grid>
-          <Grid item md={9} xs={12} sx={{ marginTop: "70px" }}>
-            <Grid container spacing={2}>
-              <Grid item md={12} xs={12}>
-                <VideoSection />
-              </Grid>
-              <Grid item md={12} xs={12}>
-                <CommentSection />
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item md={3} xs={12} sx={{ marginTop: "70px" }}>
-            <RecommendationSection />
+          <Grid item md={12}>
+            <MainBody />
           </Grid>
         </Grid>
       </Container>
