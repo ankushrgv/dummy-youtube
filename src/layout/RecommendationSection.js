@@ -1,4 +1,4 @@
-import { RecommendationCard } from "../components/recommendation/recommendationCard"
+import { RecommendationCard } from "../components/recommendation/RecommendationCard"
 import { dummyRecommendations } from "../dummyData/dummyRecommendationData"
 
 export const RecommendationSection = () => {
@@ -7,7 +7,7 @@ export const RecommendationSection = () => {
       {
         dummyRecommendations.map((video) => {
           return (
-            <RecommendationCard video={video} />
+            <RecommendationCard key={video.id} video={video} />
           )
         })
       }
