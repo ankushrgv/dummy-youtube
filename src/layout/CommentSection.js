@@ -1,5 +1,5 @@
-import { AddNewComment } from "../components/AddNewComment"
-import { AllComments } from "../components/AllComments"
+import { AddNewComment } from "../components/comments/AddNewComment"
+import { AllComments } from "../components/comments/AllComments"
 
 export const CommentSection = () => {
   return (
