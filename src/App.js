@@ -1,5 +1,8 @@
 import { Container, Grid } from '@mui/material';
 import './App.css';
+import { CommentSection } from './layout/CommentSection';
+import { RecommendationSection } from './layout/RecommendationSection';
+import { VideoSection } from './layout/VideoSection';
 
 function App() {
   return (
@@ -8,16 +11,16 @@ function App() {
         <Grid container spacing={2}>
           <Grid item md={9} xs={12}>
             <Grid container spacing={2}>
-              <Grid item md={9} xs={12}>
-                Video Container
+              <Grid item md={12} xs={12}>
+                <VideoSection />
               </Grid>
               <Grid item md={12} xs={12}>
-                Comments Section
+                <CommentSection />
               </Grid>
             </Grid>
           </Grid>
           <Grid item md={3} xs={12}>
-            Video Recommendations
+            <RecommendationSection />
           </Grid>
         </Grid>
       </Container>
