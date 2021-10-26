@@ -3,7 +3,7 @@ import { dummyRecommendations } from "../dummyData/dummyRecommendationData"
 
 export const RecommendationSection = () => {
   return (
-    <div>
+    <>
       {
         dummyRecommendations.map((video) => {
           return (
@@ -38,6 +38,6 @@ export const RecommendationSection = () => {
           )
         })
       }
-    </div >
+    </>
   )
 }
