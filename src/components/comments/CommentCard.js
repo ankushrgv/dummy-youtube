@@ -1,9 +1,87 @@
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import { Button, Grid, Typography } from "@mui/material"
 import { Box } from "@mui/system";
+import { useCallback, useEffect, useReducer, useState } from "react";
+import { getSubCommentsByCommentId } from "../../dummyData/dummySubComment";
+import { Loader } from "../util/Loader";
+import { AllComments } from "./AllComments";
+
+const initialState = {
+  loading: false,
+  error: '',
+  subComments: []
+}
+
+const subCommentsReducer = (state, action) => {
+  switch (action.type) {
+    case 'FETCHING':
+      return {
+        loading: true,
+        error: '',
+        subComments: []
+      }
+
+    case 'FETCH_SUCCESS':
+      return {
+        loading: false,
+        error: '',
+        subComments: action.payload
+      }
+
+    case 'FETCH_ERROR':
+      return {
+        loading: false,
+        error: 'Something went wrong',
+        subComments: []
+      }
+
+    default:
+      return state
+  }
+}
 
 export const CommentCard = (props) => {
   const { data } = props;
+  const [subCommentVisible, setVisibility] = useState(false)
+  const [state, dispatch] = useReducer(subCommentsReducer, initialState)
+
+  const fetchSubComments = useCallback(() => {
+    if (state.subComments.length > 0) {
+      setVisibility(true)
+    }
+    else {
+      dispatch({
+        type: "FETCHING"
+      })
+      const dummyPromise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(getSubCommentsByCommentId(data.id, data.replyCount));
+        }, 1000);
+      });
+
+      dummyPromise.then(value => {
+        dispatch({
+          type: "FETCH_SUCCESS",
+          payload: value
+        })
+        setVisibility(true)
+      }).catch(error => dispatch({ type: "FETCH_ERROR" }))
+    }
+  }, [data.id, data.replyCount, state.subComments])
+
+  useEffect(() => {
+    if (subCommentVisible) {
+      fetchSubComments();
+    }
+  }, [subCommentVisible, fetchSubComments])
+
+  const handleShowAllReplies = () => {
+    fetchSubComments();
+  }
+
+  const handleHideAllReplies = () => {
+    setVisibility(false)
+  }
 
   return (
     <Grid container spacing={2} sx={{ marginBottom: "25px" }}>
@@ -46,9 +124,16 @@ export const CommentCard = (props) => {
           </Grid>
           {
             data.replyCount > 0
-              ? <Grid item md={12} style={{ paddingTop: "0px" }}>
-                <Button color="error">View {data.replyCount} replies</Button>
-              </Grid>
+              ? state.loading
+                ? <Loader />
+                : subCommentVisible
+                  ? <Grid item md={12} style={{ paddingTop: "0px" }}>
+                    <Button color="error" onClick={handleHideAllReplies}>Hide {data.replyCount} replies</Button>
+                    <AllComments allComments={state.subComments} />
+                  </Grid>
+                  : <Grid item md={12} style={{ paddingTop: "0px" }}>
+                    <Button color="error" onClick={handleShowAllReplies}>View {data.replyCount} replies</Button>
+                  </Grid>
               : null
           }
         </Grid>

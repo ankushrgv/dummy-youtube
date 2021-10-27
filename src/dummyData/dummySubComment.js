@@ -1,68 +1,10 @@
-
-export const getDummyComments = (id) => {
-  if (id % 2 === 0) {
-    return evenIdCommentData
-  }
-  return oddIdCommentData
+export const getSubCommentsByCommentId = (id, count) => {
+  return dummyCommentThread.slice(0, count)
 }
 
-const oddIdCommentData = [
+const dummyCommentThread = [
   {
-    "id": "987",
-    "userHandle": "Luke Shaw",
-    "postedOn": "8 months ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 10
-  },
-  {
-    "id": "937",
-    "userHandle": "Rebecca Wilson",
-    "postedOn": "2 months ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 12
-  },
-  {
-    "id": "988",
-    "userHandle": "Mason Mount",
-    "postedOn": "5 months ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 8
-  },
-  {
-    "id": "989",
-    "userHandle": "Hakim Ziyech",
-    "postedOn": "1 year ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 10
-  },
-  {
-    "id": "947",
-    "userHandle": "Maria Simpson",
-    "postedOn": "3 months ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 4
-  },
-  {
-    "id": "986",
-    "userHandle": "Christian Pulisic",
-    "postedOn": "2 months ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 0
-  },
-  {
-    "id": "985",
+    "id": "9851",
     "userHandle": "Timo Werner",
     "postedOn": "2 months ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
@@ -71,7 +13,7 @@ const oddIdCommentData = [
     "replyCount": 0
   },
   {
-    "id": "984",
+    "id": "9842",
     "userHandle": "Callum",
     "postedOn": "1 month ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
@@ -80,7 +22,7 @@ const oddIdCommentData = [
     "replyCount": 0
   },
   {
-    "id": "584",
+    "id": "5843",
     "userHandle": "Kai Havertz",
     "postedOn": "1 month ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
@@ -88,67 +30,109 @@ const oddIdCommentData = [
     "dislikes": "185",
     "replyCount": 0
   },
-]
-
-const evenIdCommentData = [
   {
-    "id": "983",
-    "userHandle": "Harry Kane",
-    "postedOn": "6 days ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 4
-  },
-  {
-    "id": "982",
-    "userHandle": "Adama Traore",
-    "postedOn": "3 weeks ago",
-    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
-    "likes": "1.2k",
-    "dislikes": "185",
-    "replyCount": 8
-  },
-  {
-    "id": "981",
-    "userHandle": "Simon Smith",
-    "postedOn": "2 weeks ago",
+    "id": "9854",
+    "userHandle": "Timo Werner",
+    "postedOn": "2 months ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
     "replyCount": 0
   },
   {
-    "id": "917",
-    "userHandle": "Karla Dean",
-    "postedOn": "2 weeks ago",
+    "id": "9845",
+    "userHandle": "Callum",
+    "postedOn": "1 month ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
     "replyCount": 0
   },
   {
-    "id": "927",
-    "userHandle": "Linda Vazquez",
-    "postedOn": "8 days ago",
+    "id": "5846",
+    "userHandle": "Kai Havertz",
+    "postedOn": "1 month ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 2
+    "replyCount": 0
   },
   {
-    "id": "957",
-    "userHandle": "Hannah",
-    "postedOn": "5 days ago",
+    "id": "9857",
+    "userHandle": "Timo Werner",
+    "postedOn": "2 months ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
-    "replyCount": 4
+    "replyCount": 0
   },
   {
-    "id": "967",
-    "userHandle": "Matt",
-    "postedOn": "3 days ago",
+    "id": "9848",
+    "userHandle": "Callum",
+    "postedOn": "1 month ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "5849",
+    "userHandle": "Kai Havertz",
+    "postedOn": "1 month ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "1985",
+    "userHandle": "Timo Werner",
+    "postedOn": "2 months ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "2984",
+    "userHandle": "Callum",
+    "postedOn": "1 month ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "3584",
+    "userHandle": "Kai Havertz",
+    "postedOn": "1 month ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "9985",
+    "userHandle": "Timo Werner",
+    "postedOn": "2 months ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "7984",
+    "userHandle": "Callum",
+    "postedOn": "1 month ago",
+    "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
+    "likes": "1.2k",
+    "dislikes": "185",
+    "replyCount": 0
+  },
+  {
+    "id": "6584",
+    "userHandle": "Kai Havertz",
+    "postedOn": "1 month ago",
     "commentString": "One of my favorite song from my favorite movie by the greatest artist of all time",
     "likes": "1.2k",
     "dislikes": "185",
