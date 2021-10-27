@@ -7,6 +7,7 @@ import { Container, Grid } from '@mui/material';
 import './App.css';
 import Header from './layout/Header';
 import { MainBody } from './layout/MainBody';
+import { Homepage } from "./layout/Homepage";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
                 <Grid item md={12}>
                   <MainBody />
                 </Grid>
+              </Route>
+              <Route path="/">
+                <Homepage />
               </Route>
             </Switch>
           </Grid>
