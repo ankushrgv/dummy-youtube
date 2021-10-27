@@ -124,16 +124,18 @@ export const CommentCard = (props) => {
           </Grid>
           {
             data.replyCount > 0
-              ? state.loading
-                ? <Loader />
-                : subCommentVisible
-                  ? <Grid item md={12} style={{ paddingTop: "0px" }}>
-                    <Button color="error" onClick={handleHideAllReplies}>Hide {data.replyCount} replies</Button>
-                    <AllComments allComments={state.subComments} />
-                  </Grid>
-                  : <Grid item md={12} style={{ paddingTop: "0px" }}>
-                    <Button color="error" onClick={handleShowAllReplies}>View {data.replyCount} replies</Button>
-                  </Grid>
+              ? <Grid item md={12} style={{ paddingTop: "0px" }}>
+                {
+                  state.loading
+                    ? <Loader />
+                    : subCommentVisible
+                      ? <>
+                        <Button color="error" onClick={handleHideAllReplies}>Hide {data.replyCount} replies</Button>
+                        <AllComments allComments={state.subComments} />
+                      </>
+                      : <Button color="error" onClick={handleShowAllReplies}>View {data.replyCount} replies</Button>
+                }
+              </Grid>
               : null
           }
         </Grid>
