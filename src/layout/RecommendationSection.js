@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react";
 import { useParams } from "react-router"
-import { RecommendationCard } from "../components/recommendation/RecommendationCard"
+import { RecommendationComponent } from "../components/recommendation/RecommendationComponent";
 import { Loader } from "../components/util/Loader";
 import { getDummyRecommendations } from "../dummyData/dummyRecommendationData"
 
@@ -70,7 +70,7 @@ export const RecommendationSection = () => {
           ? <Loader />
           : state.recommendations.map((video) => {
             return (
-              <RecommendationCard key={video.id} video={video} />
+              <RecommendationComponent key={video.id} video={video} />
             )
           })
       }

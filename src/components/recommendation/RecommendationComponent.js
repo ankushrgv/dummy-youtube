@@ -1,7 +1,7 @@
 import { Card, CardActionArea, CardContent, CardMedia, Grid, Typography } from "@mui/material"
 import { useHistory } from "react-router";
 
-export const RecommendationCard = (props) => {
+export const RecommendationComponent = (props) => {
   const { video } = props;
   let history = useHistory();
 
